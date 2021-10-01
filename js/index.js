@@ -28,6 +28,8 @@ function createProduct() {
   const body = document.querySelector('table#cart tbody');
   const name = createElement.querySelector('td input[type="text"]');
   const price = createElement.querySelector('td input[type="number"]');
+  if (!name.value)
+    return false;
   const element = document.createElement('tr');
   element.classList.add("product");
   element.innerHTML = `<tr class="product">
